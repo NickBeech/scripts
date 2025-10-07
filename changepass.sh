@@ -1,8 +1,8 @@
-#!/bin/bash
+#/bin/bash
 
 # Variables (replace with actual username and password)
 username="informatica_ps"
-new_password="LApgPRvGFb7hZmZohV" ##Password to change to
+new_password="" ##Password to change to
 
 # Function to securely change password
 change_password() {
