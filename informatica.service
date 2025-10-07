@@ -1,0 +1,17 @@
+[Unit]
+Description=Informatica Secure Agent Service
+[Service]
+# user which will run agent
+User=infa
+# following must be an absolute path typically /informatica will be /home/user/infagent
+WorkingDirectory=/informatica/infaagent/apps/agentcore
+ExecStart=/usr/bin/env sh /informatica/infaagent/apps/agentcore/infaagent.sh startup
+ExecReload=/usr/bin/env sh /informatica/infaagent/apps/agentcore/infaagent.sh shutdown
+ExecReload=/usr/bin/env sh /informatica/infaagent/apps/agentcore/infaagent.sh startup
+ExecStop=/usr/bin/env sh /informatica/infaagent/apps/agentcore/infaagent.sh shutdown
+Type=forking
+TimeoutStopSec=240
+Restart=on-failure
+RestartSec=5
+[Install]
+WantedBy=multi-user.target

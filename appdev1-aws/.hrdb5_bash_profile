@@ -1,0 +1,119 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+# User specific environment and startup programs
+
+# define the instance, dev, tst, etc.
+# and replace INST, VTOOLS and VAPP with the appropriate value
+export INST=$USER
+export VTOOLSREL=HRMS_HR26U_PT85820
+export VTOOLS=HRMS_HR26U_PT85820
+
+export PS_HOME=/psoft/psapp/$VTOOLS/PSTOOLS
+export PS_CUST_HOME=/psoft/$INST/app
+export PS_CFG_HOME=/psoft/$INST/cfg
+
+export TERM=vt100
+
+ORACLE_BASE=/psoft/psapp/$VTOOLS/oracle/client
+ORACLE_HOME=$ORACLE_BASE/product/12.1.0.2
+ORACLE_TERM=vt100
+ORACLE_SID=${INST^^}
+export ORACLE_BASE ORACLE_HOME ORACLE_TERM ORACLE_SID
+
+export TUXDIR=/psoft/psapp/$VTOOLS/tux/oracle/tuxedo12.2.2.0.0
+export LD_LIBRARY_PATH=$TUXDIR/lib:$LD_LIBRARY_PATH
+
+PATH=$TUXDIR/bin:$PATH:$ORACLE_HOME/bin:
+export PATH
+
+LIBPATH=$ORACLE_HOME/lib
+export LIBPATH
+
+ULOGPFX=$PS_HOME/log/
+export ULOGPFX
+
+if [ "x$IS_PS_PLT" != "xY" ]; then
+   cd $PS_HOME
+   . $PS_HOME/psconfig.sh
+   cd $HOME
+fi
+
+export EDITOR=vi
+export LANG="C"
+
+export PS_FILEDIR=/psoft/$INST/cfg/appserv/prcs/${INST^^}/files
+
+export PS_INTERFACES_IN=/psoft/$INST/interfaces/in
+export PS_INTERFACES_OUT=/psoft/$INST/interfaces/out
+
+export PS_PCARD=/psoft/hrdata/procard
+export PS_PCARD_IN=/psoft/$INST/interfaces/in/procard
+
+export PS_SARAP=/psoft/hrdata/sarap
+export PS_SARAP_OUT=/psoft/$INST/interfaces/out/sarap
+export PS_SARAP_IN=/psoft/$INST/interfaces/in/sarap
+
+export PS_SARGL=/psoft/hrdata/sargl
+export PS_SARGL_OUT=/psoft/$INST/interfaces/out/sargl
+export PS_SARGL_IN=/psoft/$INST/interfaces/in/sargl
+
+export PS_HX_IN=/psoft/$INST/interfaces/in/hx
+export PS_GL_OUT=/psoft/$INST/interfaces/out/gl
+export PS_AP_OUT=/psoft/$INST/interfaces/out/ap
+export PS_VENDOR_OUT=/psoft/$INST/interfaces/out/vendor
+
+export PS_BUDGET=/psoft/hrdata/budget
+export PS_BUDGET_IN=/psoft/$INST/interfaces/in/budget
+
+export PS_COMBO_RULES=/psoft/$INST/interfaces/in/new_combo_rules
+
+export PS_EBD=/psoft/hrdata/ebd
+export PS_EBD_IN=/psoft/$INST/interfaces/in/ebd
+export PS_EIPAYROLL=/psoft/hrdata/eipayroll
+export PS_EIPAYROLL_IN=/psoft/$INST/interfaces/in/eipayroll
+export PS_EIPAYROLL_OUT=/psoft/$INST/interfaces/out/eipayroll
+export PS_EIPAYROLL_SCRIPTS=/psoft/$INST/app/scripts
+export PS_EIPAYROLL_STAGING=/psoft/$INST/interfaces/out/eistaging
+export PS_FICA_IN=/psoft/$INST/interfaces/in/fica
+export PS_MDNH=/psoft/hrdata/mdnh
+export PS_MDNH_OUT=/psoft/$INST/interfaces/out/mdnh
+export PS_PAYROLL=/psoft/hrdata/payroll
+export PS_PAYROLLMULTI=/psoft/hrdata/paymulti
+export PS_PAYROLLMULTI_IN=/psoft/$INST/interfaces/in/paymulti
+export PS_PAYROLL_IN=/psoft/$INST/interfaces/in/payroll
+export PS_UMSA=/psoft/hrdata/umsa
+export PS_UMSA_OUT=/psoft/$INST/interfaces/out/umsa
+export PS_UMSA_STAGE=/psoft/$INST/interfaces/out/umsastaging
+export PS_MDNH=/psoft/hrdata/mdnh
+export PS_PAGEUP_OUT=/psoft/$INST/interfaces/out/pageup
+export PS_PAGEUP_ARCHIVE=/psoft/hrdata/pageup/$INST
+export PS_KUALI_OUT=/psoft/$INST/interfaces/out/kuali
+export PS_KUALI_ARCHIVE=/psoft/hrdata/kuali/$INST
+
+export PS_TREEBASEDIR=/psoft/hrdata/trees
+
+COBDIR=/psoft/hrsupport/microfocus/VisualCOBOL/
+PATH=$COBDIR/bin:/usr/lpp/cobolbin:$PATH
+LIBPATH=/usr/lib:$COBDIR/lib:$LIBPATH
+export COBDIR PATH LIBPATH
+
+#COBDIR=/psoft/hrsupport/microfocus/svrexp-51_wp4-64bit; export COBDIR
+#PATH=$COBDIR/bin:$PATH; export PATH
+#LIBPATH=/usr/lib:/psoft/hrsupport/bea/tuxedo81/lib:$COBDIR/lib:$LIBPATH; export LIBPATH
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$LIBPATH; export LD_LIBRARY_PATH
+
+set -o vi
+
+export WW=$USER
+export HN=`hostname | awk -F. '{str="."; str= $1 str $2;print str}'`
+export PS1="[$WW@$HN] $ "
+
+umask 027
+
+export LOG4J_FORMAT_MSG_NO_LOOKUPS=true
+

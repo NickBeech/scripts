@@ -1,0 +1,30 @@
+total 64
+drwxr-x---.  7 csdb7 csdevl  4096 Jun  9 06:06 .
+drwxr-xr-x. 36 root  root    4096 Jun 18 14:08 ..
+drwxr-x---.  8 csdb7 csdevl   102 Dec  9  2023 app
+-rw-------.  1 csdb7 csdevl 15598 Jul  3 09:13 .bash_history
+-rw-r--r--.  1 csdb7 csdevl    18 Oct 27  2021 .bash_logout
+-rw-r--r--.  1 csdb7 csdevl  3117 Apr 27 11:39 .bash_profile
+-rw-r--r--.  1 csdb7 csdevl   308 Apr 11 13:13 .bashrc
+drwxr-x---.  5 csdb7 csdevl   125 Jul  3 09:13 cfg
+lrwxrwxrwx.  1 csdb7 csdb7     23 Apr 12 08:36 interfaces -> /psoft/hrtransfer/csdb7
+drwxr-x---.  3 csdb7 csdb7     19 Apr 30 13:28 .java
+-rw-r-----.  1 csdb7 csdb7      0 Jun 22 01:01 java0.log
+-rw-r-----.  1 csdb7 csdb7      0 Apr 12 11:08 java0.log.lck
+-rw-r-----.  1 csdb7 csdb7      0 Jun 22 01:01 java1.log
+-rw-r-----.  1 csdb7 csdb7      0 Apr 12 11:08 java1.log.lck
+-rw-r-----.  1 csdb7 csdb7      0 Jun 15 01:00 java2.log
+-rw-r-----.  1 csdb7 csdb7      0 Apr 12 14:34 java2.log.lck
+-rw-r-----.  1 csdb7 csdb7      0 Jun 14 10:00 java3.log
+-rw-r-----.  1 csdb7 csdb7      0 Apr 12 14:35 java3.log.lck
+-rw-r-----.  1 csdb7 csdb7  11995 Jun 14 10:01 java4.log
+-rw-r-----.  1 csdb7 csdb7      0 May  2 01:01 java4.log.lck
+-rw-r-----.  1 csdb7 csdb7      0 Jun 11 11:45 java5.log
+-rw-r-----.  1 csdb7 csdb7      0 May  2 01:01 java5.log.lck
+-rw-r-----.  1 csdb7 csdb7      0 May 18 08:36 java6.log
+-rw-r-----.  1 csdb7 csdb7      0 May 10 16:52 java6.log.lck
+-rw-r-----.  1 csdb7 csdb7      0 May 20 09:29 java7.log
+-rw-r-----.  1 csdb7 csdb7      0 May 17 15:52 java7.log.lck
+drwxrwxr-x.  2 csdb7 csdb7     30 Apr 11 13:14 psft
+drwx------.  2 csdb7 csdevl    48 Apr 11 13:48 .ssh
+-rw-------.  1 csdb7 csdb7  14316 May 23 15:17 .viminfo
